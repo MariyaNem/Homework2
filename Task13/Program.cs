@@ -6,11 +6,14 @@
 
 Console.Write("Введите трёхзначное число: ");
 int number = Convert.ToInt32(Console.ReadLine());
-
-while (number>999)
+if (number > 999)
 {
-    number = number / 10;
+    while (number > 999)
+    {
+        number = number / 10;
+    }
 }
+
 int third = number % 10;
 bool result = number > 99;
 if (result) Console.Write(third);
